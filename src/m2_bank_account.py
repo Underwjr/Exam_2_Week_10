@@ -84,7 +84,7 @@ class Bank(object):
         """
         self.amount = self.balance - amount
     # ---------------------------------------------------------------------
-    # TODO: 4. Implement and test the withdraw method
+    # Done 4. Implement and test the withdraw method
     #     Implement your own test code, before you write your method
     #     Insert your test code for withdraw, where indicated
     #     Scroll down near the bottom of this screen
@@ -145,7 +145,7 @@ def run_test_init():
         print_failure_message()
     print()
 # ---------------------------------------------------------------------
-# TODO: 3. Implement your test for the withdraw method below
+# Done3. Implement your test for the withdraw method below
 # ---------------------------------------------------------------------
 
 

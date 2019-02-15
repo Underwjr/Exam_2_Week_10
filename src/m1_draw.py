@@ -135,7 +135,9 @@ def draw_a_picture(point, n, color, window):
     line = rg.Point(0,0)
     circle = rg.Circle(point, 100)
     rectangle = rg.Rectangle(160, 80)
-    print(rectangle, circle)
+    circle.attach_to(window)
+    rectangle.attach_to(window)
+    print(circle, rectangle)
 
 
 
