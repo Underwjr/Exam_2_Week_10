@@ -179,7 +179,6 @@ def run_test_withdraw():
     else:
         b2.withdraw(50.0)
 
-
     # Test 3:
     print('   ')
     print('--------')
