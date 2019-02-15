@@ -130,14 +130,16 @@ def is_prime(n):
 
 
 def draw_a_picture(point, n, color, window):
-    window = rg.RoseWindow(window)
     window.render(0.5)
-    line = rg.Point(0,0)
+    line = rg.Point(20, 20)
     circle = rg.Circle(point, 100)
-    rectangle = rg.Rectangle(160, 80)
+    rectangle = rg.Rectangle(rg.Point(90, 100),rg.Point(210, 200))
     circle.attach_to(window)
     rectangle.attach_to(window)
-    print(circle, rectangle)
+    is_prime(n)
+    line.fill_color = color
+
+
 
 
 
