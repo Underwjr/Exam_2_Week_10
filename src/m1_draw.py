@@ -127,9 +127,20 @@ def is_prime(n):
 #
 #
 #
-def draw_a_picture(point, n, color, window):
 
-    pass
+
+def draw_a_picture(point, n, color, window):
+    window = rg.RoseWindow(window)
+    window.render(0.5)
+    line = rg.Point(0,0)
+    circle = rg.Circle(point, 100)
+    rectangle = rg.Rectangle(160, 80)
+    print(rectangle, circle)
+
+
+
+
+
 
 
 main()
