@@ -82,7 +82,13 @@ class Bank(object):
           #   b2.account_number is 'A2'
           #   an error message is printed because there are insufficient funds
         """
-        self.amount = self.balance - amount
+        if self.balance >=amount:
+                self.balance = self.balance - amount
+                return amount
+
+
+
+
     # ---------------------------------------------------------------------
     # Done 4. Implement and test the withdraw method
     #     Implement your own test code, before you write your method
@@ -162,7 +168,7 @@ def run_test_withdraw():
     expected_account_number = 'A1'
     print("Expected:", expected_name, expected_balance, expected_account_number)
     b1.withdraw(2000)
-    print("Actual:  ", b1.name, b1.amount, b1.account_number)
+    print("Actual:  ", b1.name, b1.balance, b1.account_number)
 
     # Test 2:
     print('   ')
@@ -173,7 +179,7 @@ def run_test_withdraw():
     expected_balance = 10.50
     expected_account_number = 'A2'
     print("Expected:", expected_name, expected_balance, expected_account_number)
-    print("Actual:  ", b2.name, b2.amount, b2.account_number)
+    print("Actual:  ", b2.name, b2.balance, b2.account_number)
     if b2.amount < expected_balance:
         print(b2.name + ' ' + 'has' + ' ' + 'Insufficient funds!')
     else:
@@ -186,10 +192,10 @@ def run_test_withdraw():
     b3 = Bank('Dawn', 40.00, 'A3')
     expected_name = 'Dawn'
     actual_balance = 40.00
-    expected_balance = 10.00
+    expected_balance = 40.00
     expected_account_number = 'A3'
     print("Expected:", expected_name, expected_balance, expected_account_number)
-    print("Actual:  ", b3.name, b3.amount, b3.account_number)
+    print("Actual:  ", b3.name, b3.balance, b3.account_number)
     if b3.amount <= actual_balance:
         print(b3.name + ' ' + 'has' + ' ' + 'Insufficient funds!')
     else:
